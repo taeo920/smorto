@@ -29,7 +29,7 @@ function try_theme_setup() {
 	));
 
 	// Disables the admin bar
-	// add_filter('show_admin_bar', '__return_false');
+	add_filter('show_admin_bar', '__return_false');
 
 	// Cleanup Head
 	remove_action('wp_head', 'rsd_link');

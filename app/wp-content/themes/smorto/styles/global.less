@@ -7,14 +7,20 @@
 .no-box-sizing * { behavior: url(/wp-content/themes/try-theme/scripts/vendor/boxsizing.htc); }
 
 html { font-size: 62.5%; } // Don't change this
-body { background: #fff; color: @gray-dark; font-family: @font-family-base; .font-size(16); text-align: center; }
+body { background: #121212 url(../images/bg.jpg) top center fixed no-repeat; background-size: cover; color: #ddd; font-family: @font-family-sans-serif; font-size: 1.6rem; text-align: center; }
 
 // Typography
-h1, h2, h3, h4, h5, h6 { color: @brand-primary; font-family: @font-family-base; font-weight: normal; line-height: 1em; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { color: @brand-primary; font-family: @font-family-sans-serif; font-weight: 700; line-height: 1em; letter-spacing: 1px; margin: 0; padding: 0; text-transform: uppercase; }
+h1 { font-size: 6rem; }
+h2 { font-size: 4rem; }
+h3 { font-size: 3rem; }
+h4 { font-size: 2rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 1.6rem; }
 p {}
 a { color: @brand-primary; text-decoration: none; }
 a:visited {}
-a:hover { text-decoration: underline; }
+a:hover { color: @brand-alt; border-bottom: 1px dotted @brand-primary; text-decoration: none; }
 a:active {}
 :focus { outline: 0; }
 em, i {}
@@ -22,7 +28,7 @@ strong, b {}
 s {}
 sup, sub { vertical-align: baseline; position: relative; top: -0.4em; }
 sub { top: 0.4em; }
-/*sup { font-size:1em; vertical-align:top; }/*/
+sup { font-size:1em; vertical-align:top; }
 small {}
 abbr {}
 q {}
