@@ -5,11 +5,11 @@ module.exports = {
   devtool : 'eval',
 
   entry: {
-    app: './app/wp-content/themes/try-theme/scripts/app.js'
+    app: './app/wp-content/themes/smorto/scripts/app.js'
   },
 
   output: {
-    path: './app/wp-content/themes/try-theme/dist/scripts/',
+    path: './app/wp-content/themes/smorto/dist/scripts/',
     filename: '[name].js'
   },
 
