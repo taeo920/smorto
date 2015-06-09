@@ -47,7 +47,7 @@ add_action('wp_enqueue_scripts', 'try_load_scripts');
 function try_load_admin_styles() {
 	wp_enqueue_style( 'admin', get_bloginfo('template_url') . '/dist/styles/admin.css' );
 }
-//add_action('admin_enqueue_scripts', 'try_load_admin_styles');
+add_action('admin_enqueue_scripts', 'try_load_admin_styles');
 
 /**
  * Admin JS

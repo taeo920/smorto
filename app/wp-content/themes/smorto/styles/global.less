@@ -7,16 +7,16 @@
 .no-box-sizing * { behavior: url(/wp-content/themes/try-theme/scripts/vendor/boxsizing.htc); }
 
 html { font-size: 62.5%; } // Don't change this
-body { background: #121212 url(../images/bg.jpg) top center fixed no-repeat; background-size: cover; color: #ddd; font-family: @font-family-sans-serif; font-size: 1.6rem; text-align: center; }
+body { background: #121212 url(../images/bg.jpg) top center fixed no-repeat; background-size: cover; color: #ddd; font-family: @font-family-sans-serif; .font-size(16); text-align: center; }
 
 // Typography
 h1, h2, h3, h4, h5, h6 { color: @brand-primary; font-family: @font-family-sans-serif; font-weight: 700; line-height: 1em; letter-spacing: 1px; margin: 0; padding: 0; text-transform: uppercase; }
-h1 { font-size: 6rem; }
-h2 { font-size: 4rem; }
-h3 { font-size: 3rem; }
-h4 { font-size: 2rem; }
-h5 { font-size: 1.8rem; }
-h6 { font-size: 1.6rem; }
+h1 { .font-size(60); }
+h2 { .font-size(40); }
+h3 { .font-size(30); }
+h4 { .font-size(20); }
+h5 { .font-size(18); }
+h6 { .font-size(16); }
 p {}
 a { color: @brand-primary; text-decoration: none; }
 a:visited {}

@@ -13,24 +13,15 @@
 <div class="container-fluid">
     <div class="row">
         <section class="work">
-            <div class="work-item-container">
-                <div class="work-item"></div>
-            </div>
-            <div class="work-item-container">
-                <div class="work-item"></div>
-            </div>
-            <div class="work-item-container">
-                <div class="work-item"></div>
-            </div>
-            <div class="work-item-container">
-                <div class="work-item"></div>
-            </div>
-            <div class="work-item-container">
-                <div class="work-item"></div>
-            </div>
-            <div class="work-item-container">
-                <div class="work-item"></div>
-            </div>
+            <?php $posts = get_posts( array('post_type' => 'project', 'numberposts' => 6 ) ); ?>
+            <?php foreach( $posts as $post ) : setup_postdata( $post ); ?>
+                <div class="work-item-container">
+                    <div class="work-item">
+                        <img class="screenshot" src="<?php the_field('screenshot'); ?>">
+                        <h3 class="title"><a href="<?php the_field('url'); ?>"><?php the_title(); ?></a></h3>
+                    </div>
+                </div>
+            <?php endforeach; wp_reset_query(); ?>
         </section>
     </div>
 </div>

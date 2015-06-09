@@ -3280,6 +3280,7 @@ body {
   background-size: cover;
   color: #ddd;
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
   font-size: 1.6rem;
   text-align: center;
 }
@@ -3299,21 +3300,27 @@ h6 {
   text-transform: uppercase;
 }
 h1 {
+  font-size: 60px;
   font-size: 6rem;
 }
 h2 {
+  font-size: 40px;
   font-size: 4rem;
 }
 h3 {
+  font-size: 30px;
   font-size: 3rem;
 }
 h4 {
+  font-size: 20px;
   font-size: 2rem;
 }
 h5 {
+  font-size: 18px;
   font-size: 1.8rem;
 }
 h6 {
+  font-size: 16px;
   font-size: 1.6rem;
 }
 a {
@@ -3655,27 +3662,58 @@ Styles that apply to all modules
 .intro .headline h3 {
   font-weight: 300;
 }
-.work .work-item-container {
-  background: #428bca;
-}
-.work .work-item-container:nth-child(2) {
-  background: #3a86c8;
-}
-.work .work-item-container:nth-child(3) {
-  background: #3681c1;
-}
-.work .work-item-container:nth-child(4) {
-  background: #347cb9;
-}
-.work .work-item-container:nth-child(5) {
-  background: #3276b1;
-}
-.work .work-item-container:nth-child(6) {
-  background: #3071a9;
-}
 .work .work-item {
-  padding-bottom: 70%;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 75%;
   height: 0px;
+}
+.work .work-item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 500ms ease-in-out all;
+  transition: 500ms ease-in-out all;
+  -webkit-box-shadow: inset 0px 0px 12em rgba(0, 0, 0, 0.75), inset 0px 0px 2em rgba(0, 0, 0, 0.25);
+  box-shadow: inset 0px 0px 12em rgba(0, 0, 0, 0.75), inset 0px 0px 2em rgba(0, 0, 0, 0.25);
+}
+.work .work-item .title {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  position: absolute;
+  bottom: -100px;
+  left: 15px;
+  right: 15px;
+  text-align: left;
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+}
+.work .work-item .title a {
+  color: #fff;
+}
+.work .work-item .screenshot {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  -webkit-transform: rotate(5deg) scale(1.2, 1.2);
+  -ms-transform: rotate(5deg) scale(1.2, 1.2);
+  transform: rotate(5deg) scale(1.2, 1.2);
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+}
+.work .work-item:hover:after {
+  opacity: 0;
+}
+.work .work-item:hover .title {
+  bottom: 15px;
+}
+.work .work-item:hover .screenshot {
+  -webkit-transform: rotate(0deg) scale(1, 1);
+  -ms-transform: rotate(0deg) scale(1, 1);
+  transform: rotate(0deg) scale(1, 1);
 }
 @media screen and (min-width: 768px) {
   .work .work-item-container {
@@ -3683,7 +3721,7 @@ Styles that apply to all modules
     width: 50%;
   }
 }
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1200px) {
   .work .work-item-container {
     float: left;
     width: 33.3%;
