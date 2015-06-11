@@ -114,6 +114,8 @@
                 <li>NPM</li>
                 <li>Gulp</li>
                 <li>Browserify</li>
+                <li>SOAP/REST</li>
+                <li>AJAX</li>
             </ul>
         </section>
     </div>

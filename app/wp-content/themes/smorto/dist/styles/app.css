@@ -3369,7 +3369,7 @@ a:active,
   color: #428bca;
   text-decoration: none !important;
 }
-a:hover {
+.no-touchevents a:hover {
   color: #92836e;
   border-bottom: 1px dotted #428bca;
   text-decoration: none;
@@ -3673,26 +3673,33 @@ header .container {
   table-layout: fixed;
   width: 100%;
 }
-.menu .menu-list {
+.menu-list {
   display: table-row;
 }
-.menu .menu-link {
+.menu-link {
   display: table-cell;
   text-align: center;
 }
-.menu .menu-link a {
+.menu-link a {
   display: block;
   padding: 20px 0;
   position: relative;
 }
-.menu .menu-link.active a {
+.menu-link.active a {
   color: #92836e;
 }
-.menu .menu-link a:hover {
+.menu-link a:hover {
   border-bottom: none;
 }
-.menu .menu-link a:hover:after,
-.menu .menu-link.active a:after {
+.menu-link.active a:after {
+  content: "";
+  border-bottom: 1px dotted #428bca;
+  position: absolute;
+  top: 101%;
+  left: 0px;
+  width: 100%;
+}
+.no-touchevents .menu-link a:hover:after {
   content: "";
   border-bottom: 1px dotted #428bca;
   position: absolute;
