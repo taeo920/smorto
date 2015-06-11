@@ -4,30 +4,34 @@
  */
 
 require('jquery-colorbox');
-var $ = require('jquery');
+var $   = require('jquery');
+var url = require('url');
 
 /**
  * Scrolls the window to the desired offset
  * @param  {Mixed} A number of pixels from the top of a page, or a string containing a dom selector
+ * @param  {int} An offset to add to the destination scroll distance
  */
-function scrollTo(destination) {
+function scrollTo(destination, offset) {
 	var $viewport = $('html, body');
-
-	if (typeof destination === 'number') { // If provided a numerical offset, scroll there
-		$viewport.animate({ scrollTop: destination }, 500, 'swing');
-		return false;
-	}
-
-	if (destination === 'top') { // if dest is top, go to top of window
-		$viewport.animate({ scrollTop: 0 }, 500, 'swing');
-		return false;
-	}
+	var scrollDistance;
 
 	if ( $(destination).length ) { // if dest matches a dom element, scroll to it
-		var offset = $(destination).offset();
-		$viewport.animate({ scrollTop: offset.top }, 500, 'swing');
-		return false;
+		var destOffset = $(destination).offset();
+		scrollDistance = destOffset.top;
+	} else if (typeof destination === 'number') { // If provided a numerical offset, scroll there
+		scrollDistance = destination;
 	}
+
+	if ( typeof scrollDistance !== 'undefined' ) {
+		if ( typeof offset !== 'undefined' ) {
+			scrollDistance -= offset;
+		}
+		$viewport.animate({ scrollTop: scrollDistance }, 500, 'swing');
+		return true;
+	}
+
+	return false;
 };
 
 /**

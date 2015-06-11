@@ -1,10 +1,12 @@
 /* =================================================================================
-Styles that apply to all modules
+Intro
 ================================================================================= */
 
-.module { margin-bottom: 60px; .clearfix();
-    .module-title { background: url(../images/bg_footer.png) bottom center no-repeat; background-size: 300px 8px !important; padding-bottom: 15px; margin-bottom: 15px; text-align: center; }
-    .module-sub-title { color: @brand-primary; font-weight: 300; margin-bottom: 30px; text-align: center; }
+.intro { height: 100vh; position: relative; text-align: center;
+    .headline { margin: 0 -15px; position: absolute; top: 50%; left: 50%; transform: translate(-45%, -40%);
+        .site-title { background: url(../images/bg_footer.png) bottom center no-repeat; background-size: 100% 8px; padding-bottom: 20px; margin-bottom: 20px; }
+        .site-sub-title { color: @brand-primary; font-weight: 300; }
+    }
 }
 
 // Small and larger

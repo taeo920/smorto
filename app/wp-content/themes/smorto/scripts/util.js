@@ -35,31 +35,6 @@ var user = {
 }());
 
 /**
- * A polyfill to provide a native placeholder experience to browsers that don't support it
- */
-(function () {
-	if (!Modernizr.placeholder) {
-		$('input').each(function() {
-			var $el = $(this);
-			var placeholderText = $el.attr('placeholder');
-
-			if (placeholderText) {
-				$el.addClass('placeholder-text').val(placeholderText)
-					.bind('focus', function() {
-						if ($el.val() === placeholderText) {
-							$el.val('').removeClass('placeholder-text');
-						}
-					}).bind('blur', function() {
-						if ($el.val() === '') {
-							$el.val(placeholderText).addClass('placeholder-text');
-						}
-					});
-			}
-		});
-	}
-}());
-
-/**
  * Convert dash separated values into camel case format
  * @param  {string} input The dash separated string to convert
  * @return {string}       The camel case formatted string

@@ -1,0 +1,59 @@
+/* =================================================================================
+Work
+================================================================================= */
+
+.work {
+    .work-item-container {  }
+    
+    .work-item { display: block; overflow: hidden; position: relative;
+        // Force 4:3 aspect ratio
+        padding-bottom: 75%; height: 0px;
+    
+        &:after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; .transition(500ms ease-in-out all); z-index: 1;
+            // Vignette
+            box-shadow: inset 0px 0px 12em rgba( 0, 0, 0, 0.75), inset 0px 0px 2em rgba( 0, 0, 0, 0.25);
+        }
+        &:hover { border: none; }
+        &:hover:after { opacity: 0; }
+        &:hover .details { bottom: 15px; z-index: 9999; }
+        &:hover .screenshot { transform: rotate(0deg) scale(1,1); }
+
+        .details { background: rgba( 0, 0, 0, 0.9 ); padding: 10px; position: absolute; bottom: -100%; left: 15px; right: 15px; text-align: left; .transition(300ms ease-in-out all);
+            .title {}
+            .description { color: #fff; 
+                p:first-child { margin-top: 5px; }
+            }
+        }
+
+        .screenshot { width: 100%;
+            // Position beneath vignette
+            position: relative; z-index: -1;
+            // Rotate, scale, animate, and hide overflow
+            transform: rotate(5deg) scale(1.2, 1.2); .transition(200ms ease-in-out all);
+        }
+    }
+}
+
+.touchevents .work-item .details { bottom: 15px; }
+
+// Small and larger
+@media screen and (min-width: @screen-sm-min) {
+    .work .work-item-container { float: left; width: 50%; }
+}
+
+// Medium and larger
+@media screen and (min-width: @screen-md-min) {}
+
+// Large and larger
+@media screen and (min-width: @screen-lg-min) {
+    .work .work-item-container { float: left; width: 33.3%; }
+}
+
+// X-Small only
+@media screen and (max-width: @screen-xs-max) {}
+
+// Small only
+@media screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {}
+
+// Medium only
+@media screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {}

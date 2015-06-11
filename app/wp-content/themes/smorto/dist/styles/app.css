@@ -3261,6 +3261,43 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   src: local('Roboto Condensed Bold Italic'), local('RobotoCondensed-BoldItalic'), url(http://fonts.gstatic.com/s/robotocondensed/v13/mg0cGfGRUERshzBlvqxeAIvse0WFWMXD6DWBLcV41iQ.ttf) format('truetype');
 }
 
+@font-face {
+  font-family: "icons";
+  src: url("../../fonts/icons.eot");
+  src: url("../../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../../fonts/icons.woff") format("woff"), url("../../fonts/icons.ttf") format("truetype"), url("../../fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-email-envelope:before {
+  content: "a";
+}
+.icon-linkedin:before {
+  content: "d";
+}
 /* =================================================================================
 ~ Global
 ================================================================================= */
@@ -3277,11 +3314,10 @@ html {
 }
 body {
   background: #121212 url(../images/bg.jpg) top center fixed no-repeat;
-  background-size: cover;
   color: #ddd;
   font-family: "Roboto Condensed", sans-serif;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
 }
 h1,
@@ -3290,7 +3326,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #428bca;
+  color: #fff;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 700;
   line-height: 1em;
@@ -3312,28 +3348,31 @@ h3 {
   font-size: 3rem;
 }
 h4 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+h5 {
   font-size: 20px;
   font-size: 2rem;
 }
-h5 {
+h6 {
   font-size: 18px;
   font-size: 1.8rem;
 }
-h6 {
-  font-size: 16px;
-  font-size: 1.6rem;
+p {
+  font-weight: 300;
 }
-a {
+a,
+a:active,
+:focus {
+  outline: 0 !important;
   color: #428bca;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 a:hover {
   color: #92836e;
   border-bottom: 1px dotted #428bca;
   text-decoration: none;
-}
-:focus {
-  outline: 0;
 }
 sup,
 sub {
@@ -3388,7 +3427,37 @@ td {
 /* =================================================================================
 ~ Media Queries
 ================================================================================= */
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 72px;
+    font-size: 7.2rem;
+  }
+  h2 {
+    font-size: 48px;
+    font-size: 4.8rem;
+  }
+  h3 {
+    font-size: 36px;
+    font-size: 3.6rem;
+  }
+  h4 {
+    font-size: 28px;
+    font-size: 2.8rem;
+  }
+  h5 {
+    font-size: 22px;
+    font-size: 2.2rem;
+  }
+  h6 {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+}
 @media screen and (max-width: 767px) {
+  body {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
   img {
     max-width: 100%;
     height: auto;
@@ -3532,44 +3601,42 @@ Reusable pieces to include in modules
 /* =================================================================================
 Compositions
 ================================================================================= */
-.composition-body ul,
-.composition-body ol {
+.composition ul,
+.composition ol {
   margin: 0 0 20px;
   padding: 0 0 0 20px;
 }
-.composition-body ul ul,
-.composition-body ol ul,
-.composition-body ul ol,
-.composition-body ol ol {
+.composition ul ul,
+.composition ol ul,
+.composition ul ol,
+.composition ol ol {
   margin: 0;
 }
-.composition-body ol {
+.composition ol {
   list-style: decimal outside;
 }
-.composition-body ul {
+.composition ul {
   list-style: disc outside;
 }
-.composition-body li {
+.composition li {
   line-height: 1.5em;
 }
-.composition-body h1,
-.composition-body h2,
-.composition-body h3,
-.composition-body h4,
-.composition-body h5,
-.composition-body h6 {
-  margin: 0 0 20px;
-}
-.composition-body p {
-  line-height: 1.5em;
+.composition p {
+  line-height: 1.35em;
   margin: 0 0 1.25em;
 }
-.composition-body strong {
+.composition p:last-child {
+  margin-bottom: 0;
+}
+.composition strong {
   font-weight: bold;
 }
 /* =================================================================================
 Footer
 ================================================================================= */
+.footer {
+  margin-bottom: 200px;
+}
 .footer:before,
 .footer:after {
   content: " ";
@@ -3618,11 +3685,14 @@ header .container {
   padding: 20px 0;
   position: relative;
 }
+.menu .menu-link.active a {
+  color: #92836e;
+}
 .menu .menu-link a:hover {
   border-bottom: none;
 }
 .menu .menu-link a:hover:after,
-.menu .menu-link a.active:after {
+.menu .menu-link.active a:after {
   content: "";
   border-bottom: 1px dotted #428bca;
   position: absolute;
@@ -3638,8 +3708,43 @@ header .container {
 /* =================================================================================
 Styles that apply to all modules
 ================================================================================= */
+.module {
+  margin-bottom: 60px;
+}
+.module:before,
+.module:after {
+  content: " ";
+  display: table;
+}
+.module:after {
+  clear: both;
+}
+.module:before,
+.module:after {
+  content: " ";
+  display: table;
+}
+.module:after {
+  clear: both;
+}
+.module .module-title {
+  background: url(../images/bg_footer.png) bottom center no-repeat;
+  background-size: 300px 8px !important;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.module .module-sub-title {
+  color: #428bca;
+  font-weight: 300;
+  margin-bottom: 30px;
+  text-align: center;
+}
+/* =================================================================================
+Intro
+================================================================================= */
 .intro {
-  height: 600px;
+  height: 100vh;
   position: relative;
   text-align: center;
 }
@@ -3652,17 +3757,21 @@ Styles that apply to all modules
   -ms-transform: translate(-45%, -40%);
   transform: translate(-45%, -40%);
 }
-.intro .headline h1 {
+.intro .headline .site-title {
   background: url(../images/bg_footer.png) bottom center no-repeat;
   background-size: 100% 8px;
-  color: #ffffff;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-.intro .headline h3 {
+.intro .headline .site-sub-title {
+  color: #428bca;
   font-weight: 300;
 }
+/* =================================================================================
+Work
+================================================================================= */
 .work .work-item {
+  display: block;
   overflow: hidden;
   position: relative;
   padding-bottom: 75%;
@@ -3677,22 +3786,41 @@ Styles that apply to all modules
   height: 100%;
   -webkit-transition: 500ms ease-in-out all;
   transition: 500ms ease-in-out all;
+  z-index: 1;
   -webkit-box-shadow: inset 0px 0px 12em rgba(0, 0, 0, 0.75), inset 0px 0px 2em rgba(0, 0, 0, 0.25);
   box-shadow: inset 0px 0px 12em rgba(0, 0, 0, 0.75), inset 0px 0px 2em rgba(0, 0, 0, 0.25);
 }
-.work .work-item .title {
-  background: rgba(0, 0, 0, 0.8);
+.work .work-item:hover {
+  border: none;
+}
+.work .work-item:hover:after {
+  opacity: 0;
+}
+.work .work-item:hover .details {
+  bottom: 15px;
+  z-index: 9999;
+}
+.work .work-item:hover .screenshot {
+  -webkit-transform: rotate(0deg) scale(1, 1);
+  -ms-transform: rotate(0deg) scale(1, 1);
+  transform: rotate(0deg) scale(1, 1);
+}
+.work .work-item .details {
+  background: rgba(0, 0, 0, 0.9);
   padding: 10px;
   position: absolute;
-  bottom: -100px;
+  bottom: -100%;
   left: 15px;
   right: 15px;
   text-align: left;
-  -webkit-transition: 200ms ease-in-out all;
-  transition: 200ms ease-in-out all;
+  -webkit-transition: 300ms ease-in-out all;
+  transition: 300ms ease-in-out all;
 }
-.work .work-item .title a {
+.work .work-item .details .description {
   color: #fff;
+}
+.work .work-item .details .description p:first-child {
+  margin-top: 5px;
 }
 .work .work-item .screenshot {
   width: 100%;
@@ -3704,16 +3832,8 @@ Styles that apply to all modules
   -webkit-transition: 200ms ease-in-out all;
   transition: 200ms ease-in-out all;
 }
-.work .work-item:hover:after {
-  opacity: 0;
-}
-.work .work-item:hover .title {
+.touchevents .work-item .details {
   bottom: 15px;
-}
-.work .work-item:hover .screenshot {
-  -webkit-transform: rotate(0deg) scale(1, 1);
-  -ms-transform: rotate(0deg) scale(1, 1);
-  transform: rotate(0deg) scale(1, 1);
 }
 @media screen and (min-width: 768px) {
   .work .work-item-container {
@@ -3727,8 +3847,92 @@ Styles that apply to all modules
     width: 33.3%;
   }
 }
-@media screen and (max-width: 767px) {
-  .intro {
-    height: 100vh;
+/* =================================================================================
+Experience
+================================================================================= */
+.experience-items {
+  margin-bottom: 30px;
+}
+.experience-company {
+  color: #428bca;
+  margin-bottom: 5px;
+}
+.experience-title {
+  margin-bottom: 3px;
+}
+.experience-date-range {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .experience-item .left {
+    text-align: right;
   }
+  .experience-item .right {
+    border-left: 1px solid #428bca;
+    padding-bottom: 30px;
+  }
+  .experience-item:last-child .right {
+    padding-bottom: 0px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .experience-item {
+    margin-bottom: 30px;
+  }
+  .experience-date-range {
+    border-bottom: 1px solid #428bca;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+  }
+}
+/* =================================================================================
+SKills
+================================================================================= */
+.skills-core li {
+  float: left;
+  margin-bottom: 30px;
+  text-align: center;
+  width: 50%;
+}
+.skills-core img {
+  display: inline-block;
+  width: 75%;
+}
+.skills-core .skill-title {
+  margin-bottom: 10px;
+}
+.skills-other li {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+@media screen and (min-width: 768px) {
+  .skills-core li,
+  .skills-other li {
+    width: 33.3%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .skills-core .skill-title {
+    font-size: 24px;
+    font-size: 2.4rem;
+  }
+}
+/* =================================================================================
+Contact
+================================================================================= */
+.contact-list {
+  width: 220px;
+  margin: 0 auto;
+}
+.contact-list li {
+  height: 35px;
+}
+.contact-list li:before {
+  font-size: 24px;
+  font-size: 2.4rem;
+  vertical-align: middle;
+}
+.contact-list li a {
+  margin-left: 10px;
 }

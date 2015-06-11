@@ -4,21 +4,24 @@
 
 require('es5-shim');
 require('consolelog');
+require('bootstrap');
+require('browsernizr/test/touchevents');
+require('viewport-units-buggyfill').init();
 
 var $               = require('jquery');
-var carousel        = require('./carousel.js');
+var ui              = require('./ui.js');
 var responsive      = require('./responsive.js');
-var SocialModule    = require('./social.js');
+var scroll          = require('./scroll.js');
 var AnalyticsModule = require('./analytics.js');
-var social = new SocialModule({ fbAppId: '' });
 var analytics = new AnalyticsModule({ gaid: '' });
+
+global.$ = $;
 
 /**
  * Initialize the app on DOM ready
  */
 $(function() {
 	analytics.init();
-	social.init();
-	carousel.init();
 	responsive.init();
+    scroll.init();
 });

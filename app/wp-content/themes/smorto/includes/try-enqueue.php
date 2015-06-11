@@ -16,8 +16,7 @@ add_action('wp_enqueue_scripts', 'try_load_styles');
  * Front End JS
  */
 function try_load_scripts() {
-
-	wp_deregister_script('jquery');
+    wp_enqueue_script('jquery', get_bloginfo('template_url').'/scripts/vendor/jquery.js', array(), false, false);
 
 	// Theme Script
 	if ( WP_DEBUG ) {

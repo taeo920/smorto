@@ -10,9 +10,10 @@ header { background: rgba(0, 0, 0, .75);
     .menu-list { display: table-row; }
     .menu-link { display: table-cell; text-align: center;
         a { display: block; padding: 20px 0; position: relative; }
+        &.active a { color: @brand-alt; }
         a:hover { border-bottom: none; }
         a:hover:after,
-        a.active:after { content: ""; border-bottom: 1px dotted @brand-primary; position: absolute; top: 101%; left: 0px; width: 100%; }
+        &.active a:after { content: ""; border-bottom: 1px dotted @brand-primary; position: absolute; top: 101%; left: 0px; width: 100%; }
     }
 }
 
