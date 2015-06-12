@@ -2,9 +2,9 @@
 SKills
 ================================================================================= */
 
-.skills-core {
+.skills-core { .clearfix();
     li { float: left; margin-bottom: 30px; text-align: center; width: 50%; }
-    img { display: inline-block; width: 75%; }
+    img { display: inline-block; width: 50%; }
     .skill-title { margin-bottom: 10px; }
 }
 
@@ -21,17 +21,23 @@ SKills
 }
 
 // Medium and larger
-@media screen and (min-width: @screen-md-min) {}
-
-// Large and larger
-@media screen and (min-width: @screen-lg-min) {}
-
-// X-Small only
-@media screen and (max-width: @screen-xs-max) {
+@media screen and (min-width: @screen-md-min) {
     .skills-core {
-        .skill-title { .font-size(24); }
+        li { width: 16.6%; }
+        img { width: 60%; }
     }
 }
+
+// Large and larger
+@media screen and (min-width: @screen-lg-min) {
+    .skills-core {
+        li { width: 16.6%; }
+        img { width: 70%; }
+    }
+}
+
+// X-Small only
+@media screen and (max-width: @screen-xs-max) {}
 
 // Small only
 @media screen and (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {}

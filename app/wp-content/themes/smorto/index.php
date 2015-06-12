@@ -77,27 +77,27 @@
             <h4 class="module-sub-title">Core</h4>
             <ul class="skills-core">
                 <li>
-                    <h3 class="skill-title">WordPress</h3>
+                    <h4 class="skill-title">WordPress</h4>
                     <img src="<?php bloginfo('template_url'); ?>/images/badge-wordpress.png">
                 </li>
                 <li>
-                    <h3 class="skill-title">PHP</h3>
+                    <h4 class="skill-title">PHP</h4>
                     <img src="<?php bloginfo('template_url'); ?>/images/badge-php.png">
                 </li>
                 <li>
-                    <h3 class="skill-title">jQuery</h3>
+                    <h4 class="skill-title">jQuery</h4>
                     <img src="<?php bloginfo('template_url'); ?>/images/badge-jquery.png">
                 </li>
                 <li>
-                    <h3 class="skill-title">HTML5</h3>
+                    <h4 class="skill-title">HTML5</h4>
                     <img src="<?php bloginfo('template_url'); ?>/images/badge-html5.png">
                 </li>
                 <li>
-                    <h3 class="skill-title">CSS3</h3>
+                    <h4 class="skill-title">CSS3</h4>
                     <img src="<?php bloginfo('template_url'); ?>/images/badge-css3.png">
                 </li>
                 <li>
-                    <h3 class="skill-title">JavaScript</h3>
+                    <h4 class="skill-title">JavaScript</h4>
                     <img src="<?php bloginfo('template_url'); ?>/images/badge-javascript.png">
                 </li>
             </ul>

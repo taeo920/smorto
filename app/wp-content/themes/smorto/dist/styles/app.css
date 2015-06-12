@@ -3861,7 +3861,6 @@ Experience
   margin-bottom: 30px;
 }
 .experience-company {
-  color: #428bca;
   margin-bottom: 5px;
 }
 .experience-title {
@@ -3895,6 +3894,22 @@ Experience
 /* =================================================================================
 SKills
 ================================================================================= */
+.skills-core:before,
+.skills-core:after {
+  content: " ";
+  display: table;
+}
+.skills-core:after {
+  clear: both;
+}
+.skills-core:before,
+.skills-core:after {
+  content: " ";
+  display: table;
+}
+.skills-core:after {
+  clear: both;
+}
 .skills-core li {
   float: left;
   margin-bottom: 30px;
@@ -3903,7 +3918,7 @@ SKills
 }
 .skills-core img {
   display: inline-block;
-  width: 75%;
+  width: 50%;
 }
 .skills-core .skill-title {
   margin-bottom: 10px;
@@ -3919,10 +3934,20 @@ SKills
     width: 33.3%;
   }
 }
-@media screen and (max-width: 767px) {
-  .skills-core .skill-title {
-    font-size: 24px;
-    font-size: 2.4rem;
+@media screen and (min-width: 992px) {
+  .skills-core li {
+    width: 16.6%;
+  }
+  .skills-core img {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skills-core li {
+    width: 16.6%;
+  }
+  .skills-core img {
+    width: 70%;
   }
 }
 /* =================================================================================
