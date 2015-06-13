@@ -3812,6 +3812,16 @@ Work
   -ms-transform: rotate(0deg) scale(1, 1);
   transform: rotate(0deg) scale(1, 1);
 }
+.work .work-item .screenshot {
+  width: 100%;
+  position: relative;
+  z-index: -1;
+  -webkit-transform: rotate(5deg) scale(1.2, 1.2);
+  -ms-transform: rotate(5deg) scale(1.2, 1.2);
+  transform: rotate(5deg) scale(1.2, 1.2);
+  -webkit-transition: 200ms ease-in-out all;
+  transition: 200ms ease-in-out all;
+}
 .work .work-item .details {
   background: rgba(0, 0, 0, 0.9);
   padding: 10px;
@@ -3828,16 +3838,6 @@ Work
 }
 .work .work-item .details .description p:first-child {
   margin-top: 5px;
-}
-.work .work-item .screenshot {
-  width: 100%;
-  position: relative;
-  z-index: -1;
-  -webkit-transform: rotate(5deg) scale(1.2, 1.2);
-  -ms-transform: rotate(5deg) scale(1.2, 1.2);
-  transform: rotate(5deg) scale(1.2, 1.2);
-  -webkit-transition: 200ms ease-in-out all;
-  transition: 200ms ease-in-out all;
 }
 .touchevents .work-item .details {
   bottom: 15px;
