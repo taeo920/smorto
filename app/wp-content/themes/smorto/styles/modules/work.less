@@ -34,7 +34,9 @@ Work
     }
 }
 
-.touchevents .work-item .details { bottom: 15px; }
+.touchevents .work-item {
+    .details { bottom: 15px; }
+}
 
 // Small and larger
 @media screen and (min-width: @screen-sm-min) {
@@ -57,3 +59,10 @@ Work
 
 // Medium only
 @media screen and (min-width: @screen-md-min) and (max-width: @screen-md-max) {}
+
+// X-Small and Small only
+@media screen and (max-width: @screen-sm-max) {
+    .touchevents .work-item {
+        .description { display: none; }
+    }
+}

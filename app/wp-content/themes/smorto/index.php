@@ -3,7 +3,7 @@
         <section class="intro col-xs-12">
             <div class="headline">
                 <h1 class="site-title">Steve Morton</h1>
-                <h3 class="site-sub-title">PHP Web Developer SM</h3>
+                <h3 class="site-sub-title">PHP Web Developer</h3>
             </div>
         </section>
 	</div>
