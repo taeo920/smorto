@@ -124,7 +124,7 @@
             <h2 class="module-title">Contact</h2>
             <ul class="contact-list">
                 <li class="icon-linkedin"><a href="https://www.linkedin.com/pub/steve-morton/a9/310/b06" target="_blank">https://goo.gl/hyV6lD</a></li>
-                <li class="icon-email-envelope"><a href="mailto:smorton920@gmail.com" target="_blank">smorton920@gmail.com</a></li>
+                <li class="icon-email-envelope"><a href="mailto:smorton920@gmail.com">smorton920@gmail.com</a></li>
             </ul>
         </section>
     </div>

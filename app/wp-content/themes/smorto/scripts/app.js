@@ -13,9 +13,7 @@ var ui              = require('./ui.js');
 var responsive      = require('./responsive.js');
 var scroll          = require('./scroll.js');
 var AnalyticsModule = require('./analytics.js');
-var analytics = new AnalyticsModule({ gaid: '' });
-
-global.$ = $;
+var analytics = new AnalyticsModule({ gaid: 'UA-7944904-1' });
 
 /**
  * Initialize the app on DOM ready
