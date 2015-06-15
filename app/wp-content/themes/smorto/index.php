@@ -107,14 +107,17 @@
                 <li>Git</li>
                 <li>SEO</li>
                 <li>Photoshop</li>
+                <li>Web Design</li>
                 <li>Bootstrap</li>
                 <li>LESS</li>
+                <li>UX</li>
                 <li>LAMP Config</li>
                 <li>mySQL</li>
                 <li>NPM</li>
                 <li>Gulp</li>
                 <li>Browserify</li>
-                <li>SOAP/REST</li>
+                <li>SOAP</li>
+                <li>REST</li>
                 <li>AJAX</li>
             </ul>
         </section>
