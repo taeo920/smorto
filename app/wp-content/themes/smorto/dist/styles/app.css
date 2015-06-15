@@ -3653,12 +3653,6 @@ Footer
 .footer:after {
   clear: both;
 }
-.footer-copyright {
-  float: left;
-}
-.footer-menu {
-  float: right;
-}
 /* =================================================================================
 Header
 ================================================================================= */
@@ -3716,7 +3710,13 @@ header .container {
 Styles that apply to all modules
 ================================================================================= */
 .module {
-  margin-bottom: 60px;
+  margin-top: 60px;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .module:before,
 .module:after {
@@ -3752,8 +3752,13 @@ Intro
 ================================================================================= */
 .intro {
   height: 100vh;
-  position: relative;
   text-align: center;
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .intro .headline {
   margin: 0 -15px;

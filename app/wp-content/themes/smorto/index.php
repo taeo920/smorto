@@ -11,7 +11,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <section id="work" class="work module">
+        <section id="work" class="work">
             <?php $projects = get_posts( array('post_type' => 'project', 'numberposts' => 6, 'orderby' => 'menu_order', 'order' => 'ASC' ) ); ?>
             <?php foreach( $projects as $post ) : setup_postdata( $post ); ?>
                 <div class="work-item-container">
@@ -30,7 +30,7 @@
 
 <div class="container">
     <div class="row">
-        <section id="experience" class="experience module col-xs-12">
+        <section id="experience" class="experience module">
             <h2 class="module-title">Experience</h2>
             <?php $experience_types = get_terms('experience-type'); ?>
             <?php foreach( $experience_types as $experience_type ) : ?>
@@ -71,34 +71,34 @@
         </section>
     </div>
     <div class="row">
-        <section id="skills" class="skills module col-xs-12">
+        <section id="skills" class="skills module">
             <h2 class="module-title">Skills</h2>
             
             <h4 class="module-sub-title">Core</h4>
             <ul class="skills-core">
                 <li>
                     <h4 class="skill-title">WordPress</h4>
-                    <img src="<?php bloginfo('template_url'); ?>/images/badge-wordpress.png">
+                    <img src="<?php bloginfo('template_url'); ?>/images/badge-wordpress.png" alt="WordPress">
                 </li>
                 <li>
                     <h4 class="skill-title">PHP</h4>
-                    <img src="<?php bloginfo('template_url'); ?>/images/badge-php.png">
+                    <img src="<?php bloginfo('template_url'); ?>/images/badge-php.png" alt="PHP">
                 </li>
                 <li>
                     <h4 class="skill-title">jQuery</h4>
-                    <img src="<?php bloginfo('template_url'); ?>/images/badge-jquery.png">
+                    <img src="<?php bloginfo('template_url'); ?>/images/badge-jquery.png" alt="jQuery">
                 </li>
                 <li>
                     <h4 class="skill-title">HTML5</h4>
-                    <img src="<?php bloginfo('template_url'); ?>/images/badge-html5.png">
+                    <img src="<?php bloginfo('template_url'); ?>/images/badge-html5.png" alt="HTML5">
                 </li>
                 <li>
                     <h4 class="skill-title">CSS3</h4>
-                    <img src="<?php bloginfo('template_url'); ?>/images/badge-css3.png">
+                    <img src="<?php bloginfo('template_url'); ?>/images/badge-css3.png" alt="CSS3">
                 </li>
                 <li>
                     <h4 class="skill-title">JavaScript</h4>
-                    <img src="<?php bloginfo('template_url'); ?>/images/badge-javascript.png">
+                    <img src="<?php bloginfo('template_url'); ?>/images/badge-javascript.png" alt="JavaScript">
                 </li>
             </ul>
             
@@ -116,14 +116,14 @@
                 <li>NPM</li>
                 <li>Gulp</li>
                 <li>Browserify</li>
-                <li>SOAP</li>
-                <li>REST</li>
+                <li>SOAP/REST</li>
+                <li>bbPress</li>
                 <li>AJAX</li>
             </ul>
         </section>
     </div>
     <div class="row">
-        <section id="contact" class="contact module col-xs-12">
+        <section id="contact" class="contact module">
             <h2 class="module-title">Contact</h2>
             <ul class="contact-list">
                 <li class="icon-linkedin"><a href="https://www.linkedin.com/pub/steve-morton/a9/310/b06" target="_blank">https://goo.gl/hyV6lD</a></li>
