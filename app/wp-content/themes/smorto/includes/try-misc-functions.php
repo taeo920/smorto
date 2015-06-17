@@ -41,7 +41,9 @@ function try_get_template_part( $slug, $name, $echo = true, $params = array() ) 
  * @param string $template Name of the loop template
  */
 function try_posts_loop( $posts, $template ) {
-    foreach( get_field('featured_projects') as $post ) {
+    global $post;
+    
+    foreach( $posts as $post ) {
         setup_postdata( $post );
         try_get_template_part('partials', 'loop-' . $template );
     }

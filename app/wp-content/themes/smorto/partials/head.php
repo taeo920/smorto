@@ -11,14 +11,9 @@
     
     <title><?php wp_title('|'); ?></title>
     <meta name="author" content="Steve Morton">
-    <meta name="description" content="Portfolio and interactive resume of Steve Morton, a Web Developer in Baltimore, MD specializing in PHP development.">
-    <meta name="keywords" content="Steve Morton, Web Developer, WordPress, PHP, CMS">
     
     <meta property="og:image" content="<?php bloginfo('template_url'); ?>/images/fb-share.png">
-    <meta property="og:title" content="<?php wp_title('|'); ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="Portfolio and interactive resume of Steve Morton, a Web Developer in Baltimore, MD specializing in PHP development.">
-    
+
     <link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png" type="image/png">
     <link rel="icon" href="<?php bloginfo('template_url'); ?>/images/favicon.png" type="image/png">
 
