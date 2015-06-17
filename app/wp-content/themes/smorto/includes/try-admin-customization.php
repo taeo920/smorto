@@ -66,8 +66,8 @@ function try_menu_order( $menu_ord ) {
 		// 'separator-last', // Last separator
 	);
 }
-add_filter('custom_menu_order', '__return_true');
-add_filter('menu_order', 'try_menu_order');
+//add_filter('custom_menu_order', '__return_true');
+//add_filter('menu_order', 'try_menu_order');
 
 /**
  * Customizes the editor role
@@ -88,7 +88,7 @@ function try_customize_editor_role() {
 	$role->add_cap('gravityforms_view_entry_notes');
 	$role->add_cap('gravityforms_edit_entry_notes');
 }
-add_filter('after_switch_theme', 'try_customize_editor_role');
+//add_filter('after_switch_theme', 'try_customize_editor_role');
 
 /**
  * Removes admin bar items
@@ -125,7 +125,7 @@ add_filter('mce_buttons_2', 'try_enable_mce_buttons');
  * Remove post_tags and categories from admin
  */
 function try_unregister_default_taxonomies() {
-	// register_taxonomy('category', array() );
-	// register_taxonomy('post_tag', array() );
+	register_taxonomy('category', array() );
+	register_taxonomy('post_tag', array() );
 }
-add_action('init', 'try_unregister_default_taxonomies');
+//add_action('init', 'try_unregister_default_taxonomies');

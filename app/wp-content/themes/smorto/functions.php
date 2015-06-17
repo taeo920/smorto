@@ -2,19 +2,19 @@
 
 function try_theme_setup() {
 	// Enable support for post thumbnails on posts and pages
-	add_theme_support('post-thumbnails');
+	// add_theme_support('post-thumbnails');
 
 	// Add custom image sizes
 	// add_image_size( $name, $width = 0, $height = 0, $crop = false );
 
 	// Enable support for post formats
-	add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
+	// add_theme_support( 'post-formats', array( 'aside', 'image', 'video', 'quote', 'link' ) );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array('comment-list', 'search-form', 'comment-form', 'gallery', 'caption') );
 
 	// Add default posts and comments RSS feed links to head
-	add_theme_support('automatic-feed-links');
+	// add_theme_support('automatic-feed-links');
 
 	// Enable admin to set custom background images in 'appearance > background'
 	// add_theme_support('custom-background');

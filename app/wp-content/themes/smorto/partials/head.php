@@ -10,7 +10,7 @@
 	<meta http-equiv="cleartype" content="on">
     
     <title><?php wp_title('|'); ?></title>
-    <meta name="author" content="Steve Morton">	
+    <meta name="author" content="Steve Morton">
     <meta name="description" content="Portfolio and interactive resume of Steve Morton, a Web Developer in Baltimore, MD specializing in PHP development.">
     <meta name="keywords" content="Steve Morton, Web Developer, WordPress, PHP, CMS">
     
