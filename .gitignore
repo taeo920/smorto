@@ -1,22 +1,18 @@
-.DS_Store
-*~
+# Ignore certain file types
+*.DS_Store
 *.sql
 *.log
 
-node_modules
-Movefile
-.ftppass
+# Ignore everything in the root except the "wp-content" directory.
+/*
+!.gitignore
+!wp-content/
 
-local-config.php
-wp-config.php
-app/wp-content/uploads/
-app/wp-content/blogs.dir/
-app/wp-content/upgrade/
-app/wp-content/backup-db/
-app/wp-content/advanced-cache.php
-app/wp-content/wp-cache-config.php
-app/sitemap.xml
-app/wp-content/cache/
-app/wp-content/backups/
-app/sitemap.xml.gz
-app/db-replace/
+# Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+ 
+# Ignore everything in the "plugins" directory, except the plugins you specify
+wp-content/plugins/*
+# !wp-content/plugins/my-single-file-plugin.php
