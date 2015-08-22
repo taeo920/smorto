@@ -42,6 +42,7 @@
         "es5-shim": "^4.1.0",
         "jquery": "^1.11.2",
         "jquery-colorbox": "^1.6.0",
-        "url": "^0.10.3"
+        "url": "^0.10.3",
+        "viewport-units-buggyfill": "^0.5.3"
     }
 }
