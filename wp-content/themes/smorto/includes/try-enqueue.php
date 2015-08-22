@@ -29,14 +29,16 @@ function try_load_scripts() {
 	if( is_singular() && get_option('thread_comments') ) wp_enqueue_script('comment-reply');
 
 	// Dynamic URLs for use in scripts
+    /*
 	wp_localize_script( 'main', 'urls', array(
 		'base' => get_bloginfo('url'),
 		'theme' => get_bloginfo('template_url'),
 		'ajax' => admin_url('admin-ajax.php')
 	));
+    */
 
 	// Initialize vars for JS
-	wp_localize_script( 'main', 'info', array( /* IDs, etc. */ ));
+	//wp_localize_script( 'main', 'info', array( /* IDs, etc. */ ));
 }
 add_action('wp_enqueue_scripts', 'try_load_scripts');
 

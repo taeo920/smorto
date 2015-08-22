@@ -9,8 +9,6 @@ require('browsernizr/test/touchevents');
 require('viewport-units-buggyfill').init();
 
 var $               = require('jquery');
-var ui              = require('./ui.js');
-var responsive      = require('./responsive.js');
 var scroll          = require('./scroll.js');
 var AnalyticsModule = require('./analytics.js');
 var analytics = new AnalyticsModule({ gaid: 'UA-7944904-1' });
@@ -20,6 +18,5 @@ var analytics = new AnalyticsModule({ gaid: 'UA-7944904-1' });
  */
 $(function() {
 	analytics.init();
-	responsive.init();
     scroll.init();
 });
