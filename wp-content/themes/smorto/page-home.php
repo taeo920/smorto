@@ -9,14 +9,6 @@
 	</div>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <section id="work" class="work">
-            <?php try_posts_loop( get_field('featured_projects'), 'project'); ?>
-        </section>
-    </div>
-</div>
-
 <div class="container">
     <div class="row">
         <section id="experience" class="experience module">
@@ -56,7 +48,7 @@
         <section id="contact" class="contact module">
             <h2 class="module-title">Contact</h2>
             <ul class="contact-list">
-                <li class="icon-linkedin"><a href="https://www.linkedin.com/pub/steve-morton/a9/310/b06" target="_blank">https://goo.gl/hyV6lD</a></li>
+                <li class="icon-linkedin"><a href="https://www.linkedin.com/in/smorto/" target="_blank">https://www.linkedin.com/in/smorto/</a></li>
                 <li class="icon-email-envelope"><a href="mailto:smorton920@gmail.com">smorton920@gmail.com</a></li>
             </ul>
         </section>
